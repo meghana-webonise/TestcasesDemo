@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    private int left, right, result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,10 +19,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn.setOnClickListener(this);
     }
 
-
     @Override
     public void onClick(View v) {
         Intent intent=new Intent(this,NewActivity.class);
         startActivity(intent);
     }
+        public void setLeft(int val) {
+            left = val;
+        }
+
+        public void setRight(int val) {
+            right = val;
+        }
+
+        public int getResult() {
+            return result;
+        }
+
+        public void add() {
+            result = left + right;
+        }
+
+        public void multiply() {
+            result = left * right;
+        }
+
 }

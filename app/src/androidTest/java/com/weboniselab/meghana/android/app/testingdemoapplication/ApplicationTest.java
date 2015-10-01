@@ -19,6 +19,7 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<MainActivi
     private MainActivity mainActivity;
     private TextView tv;
 
+
     public ApplicationTest(){
         super(MainActivity.class);
     }
@@ -44,7 +45,7 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<MainActivi
             }
         });
 
-        NewActivity newActivity = (NewActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5);
+        NewActivity newActivity = (NewActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 500);
         // next activity is opened and captured.
         assertNotNull(newActivity);
         newActivity .finish();
@@ -67,5 +68,15 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<MainActivi
     @Override
     protected void tearDown() throws Exception {
         super.tearDown();
+    }
+
+    @SmallTest
+    public void testMethodCheck() {
+        mainActivity.setLeft(5);
+        mainActivity.setRight(10);
+        mainActivity.add();
+        assertEquals("10 + 5 must be 15", 15, mainActivity.getResult());
+        mainActivity.multiply();
+        assertEquals("10 * 5 must be 50", 50, mainActivity.getResult());
     }
 }
