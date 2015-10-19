@@ -13,15 +13,12 @@ public class UserTest {
     public void UserNameTest() {
         User u = new User();
 
-        u.setName("foo");
+        u.setName("meghana");
 
-        Assert.assertEquals("foo", u.getName());
+        Assert.assertEquals("meghana", u.getName());
     }
 
 
-    @Test
-    public void failingTest() {
-        Assert.assertFalse(true);
-    }
+
 
 }
