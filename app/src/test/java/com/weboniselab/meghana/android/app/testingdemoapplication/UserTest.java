@@ -19,6 +19,10 @@ public class UserTest {
     }
 
 
+    @Test
+    public void failingTest() {
+        Assert.assertFalse(true);
+    }
 
 
 }
