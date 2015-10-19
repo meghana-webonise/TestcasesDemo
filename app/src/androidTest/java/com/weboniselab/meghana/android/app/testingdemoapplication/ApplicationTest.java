@@ -1,11 +1,7 @@
 package com.weboniselab.meghana.android.app.testingdemoapplication;
 
-import android.app.Application;
 import android.app.Instrumentation;
-import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
-import android.test.ApplicationTestCase;
-import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.widget.Button;
