@@ -20,7 +20,7 @@ public class UserTest {
 
     @Test
     public void failingTest() {
-        Assert.assertFalse(false);
+        Assert.assertFalse(true);
     }
 
 
