@@ -71,7 +71,7 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<MainActivi
         mainActivity.setLeft(5);
         mainActivity.setRight(10);
         mainActivity.add();
-        assertEquals("10 + 5 must be 15", 15, mainActivity.getResult());
+        assertEquals("10 + 5 must be 15", 20, mainActivity.getResult());
         mainActivity.multiply();
         assertEquals("10 * 5 must be 50", 50, mainActivity.getResult());
     }

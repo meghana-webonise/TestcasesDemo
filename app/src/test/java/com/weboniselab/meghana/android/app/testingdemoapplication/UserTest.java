@@ -13,11 +13,15 @@ public class UserTest {
     public void UserNameTest() {
         User u = new User();
 
-        u.setName("meghana");
+        u.setName("ggg");
 
         Assert.assertEquals("meghana", u.getName());
     }
 
+    @Test
+    public void failingTest() {
+        Assert.assertFalse(true);
+    }
 
 
 
