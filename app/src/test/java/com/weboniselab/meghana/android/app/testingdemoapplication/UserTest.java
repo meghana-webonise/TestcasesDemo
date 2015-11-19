@@ -13,7 +13,7 @@ public class UserTest {
     public void UserNameTest() {
         User u = new User();
 
-        u.setName("ggg");
+        u.setName("meghana");
 
         Assert.assertEquals("meghana", u.getName());
     }
